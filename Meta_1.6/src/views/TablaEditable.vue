@@ -254,9 +254,9 @@ export default {
   },
 
   methods: {
-    initialize()
+    async initialize()
     {
-      fetch(urlAutores)
+      await fetch(urlAutores)
         .then((response) => response.json())
         .then((data) =>
         {
@@ -267,7 +267,7 @@ export default {
           });
         });
 
-      fetch(urlPosts)
+      await fetch(urlPosts)
         .then((response) => response.json())
         .then((data) =>
         {
